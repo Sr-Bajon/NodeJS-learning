@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= tituloPagina %></title>
+</head>
+<body>
+<h1><%= tituloBody %></h1>
+<!-- <%= %> Evalua e imprime el contenido en pantalla -->
+<%= unArray[0] %> <%= unArray[1] %> <%= unArray[2] %>
+
+<!-- Para instrucciones de control hay que usar <% %> en vez de <%= %>
+Que lo que hace es ejecutar el javascript en vez de mostrarlo-->
+<% for(var i=0;i<unArray.length;i++){ %>
+    <h3><%= unArray[i] %></h3>
+<% } %>
+
+<% for(var x in unObjeto) { %>
+    <h4><%= unObjeto[x] %></h4>
+<% } %>
+
+
+<ul>
+    <li><a href="/">Indice</a></li>
+</ul>
+
+</body>
+</html>

@@ -12,7 +12,7 @@ por estar despues de otras.
 En el ejemplo hay 4 middleware para las rutas, **app.get** captura las rutas GET,
 **app.post** las POST y así. 
 
-Este primer middleware captura las rutas GET que coincidan con '/'
+El primer middleware captura las rutas GET que coincidan con '/'
 http://localhost/3000   o   http://localhost/3000/  es lo mismo.  
 Vemos que la función recibe los objetos request y response, la peticion y la respuesta
 respectivamente

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= tituloPagina %></title>
+</head>
+<body>
+<h1><%= tituloBody %></h1>
+
+<!-- Incluye sin procesar lo que se envie poniendolo el - a la apertura de ejs -->
+<section><%- seccion %></section>
+
+<!-- Podemos incluir secciones, partials con el siguiente comando de ejs -->
+<section><%- include sections/seccionEstatica %></section>
+
+<ul>
+    <li><a href="/">Indice</a></li>
+</ul>
+
+</body>
+</html>
