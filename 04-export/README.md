@@ -10,3 +10,6 @@ un único archivo como ya hemos dicho.
 
 En estos ejemplos podemos ver diferentes formas de usar **module.exports** y **exports**
 
+También hay que tener en cuenta que a al hora de importarlo, ponerlo en el orden 
+adecuado procurando que si un modulo X usa algo de otro modulo Y, habrá que 
+importar primero el modulo Y para que el X no de fallos. 
