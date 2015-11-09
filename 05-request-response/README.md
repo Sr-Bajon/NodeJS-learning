@@ -3,6 +3,7 @@
 ## Partes de una URL
 
 https://www.google.es/search?q=jennifer+lopez+green+dress
+
 http://localhost:3000/login?user=Juan#historial
 
 ### PROTOCOLO:
@@ -49,10 +50,10 @@ El fragmento, o hash, no se pasa al servidor, lo usa solo el navegador. Antes se
 El protocolo HTTP define una serie de métodos para comunicarse con el servidor, los mas comunes son GET y POST. La información importante para el servidor es el método utilizado, el path y el querystring.
 Las aplicaciones Restfull utilizan otros métodos para comunicarse con el servidor, por convenio los mas utilizados son estos:
 
-**GET** : Obtener uno o mas elementos
-**POST**: Crear un nuevo elemento
-**PUT**: Actualizar
-**DELETE**: Borrar
+* **GET** : Obtener uno o mas elementos
+* **POST**: Crear un nuevo elemento
+* **PUT**: Actualizar
+* **DELETE**: Borrar
 
 ### CABECERAS DE LA PETICIÓN(REQUEST)
 
