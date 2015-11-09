@@ -2,9 +2,9 @@
 
 ## Partes de una URL
 
-https://www.google.es/search?q=jennifer+lopez+green+dress
+**<https://www.google.es/search?q=jennifer+lopez+green+dress>**
 
-http://localhost:3000/login?user=Juan#historial
+**<http://localhost:3000/login?user=Juan#historial>**
 
 ### PROTOCOLO:
 
