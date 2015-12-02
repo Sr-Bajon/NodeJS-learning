@@ -1,0 +1,39 @@
+var mainApplicationModuleName = 'mean';
+var mainApplicationModule = angular.module(mainApplicationModuleName,
+    ['ngResource','ngRoute', 'example', 'usersMod',
+        'articles', 'chat']);
+
+//esto añade un ! a las rutas que usemos, a esto se le llama
+// Hashbangs.Hashbangs y sirve para indicar a los motores de busqueda
+// que se trata de una one page application.
+//los bloques de configuracion se ejecutan durante el bootstrap, solo
+//providers y constantes pueden ser inyectadas.
+mainApplicationModule.config(['$locationProvider',
+    function($locationProvider) {
+        $locationProvider.hashPrefix('!');
+    }
+]);
+
+/*
+location.hash devuelve the anchor part of a URL. Assume that the
+current URL is http://www.example.com/test.htm#part2:
+
+var x = location.hash;
+
+The result of x will be:
+#part2
+
+Esta instruccion en este caso sirve para depurar un error al autentificarse
+con facebook en el que redirige la pagina usando el hash #_=_ , lo que no
+queremos
+*/
+if (window.location.hash === '#_=_') window.location.hash = '#!';
+
+//angular element envuelve un elemento DOM o HTML, a continuación
+// utiliza el evento ready del objeto document que indica que se
+// ejecuta cuando esté completamente cargado para inicializar Angular,
+// hacer bootstrap
+// angular.bootstrap(element, [modules], [config])
+angular.element(document).ready(function() {
+    angular.bootstrap(document, [mainApplicationModuleName]);
+});
